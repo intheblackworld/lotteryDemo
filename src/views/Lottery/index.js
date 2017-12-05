@@ -30,17 +30,14 @@ class Lottery extends Component {
   componentDidMount() {
     this.fetchDataXhr()
       .then(response => response.json())
-      .then((json) => { 
-        // expect: "2017120484" // 期號
-        // opencode:"11,04,05,08,01" // 開獎號碼
-        // opentime:"2017-12-04 22:51:00" // 
-        // opentimestamp: 1512399060 // 歷史獎期
+      .then((json) => {
         console.log(json.data)
         const dataList = json.data
         const expect = dataList[0].expect
         const opencode = dataList[0].opencode.split(",")
         const opentime = dataList[0].opentime
         const opentimestamp = dataList[0].opentimestamp
+
         this.setState({
           lastLottery: {
             expect,

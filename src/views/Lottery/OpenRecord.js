@@ -24,8 +24,8 @@ class OpenRecord extends Component {
                 return
               }
               return (
-                <div className="lottery-openrecord-item">
-                <span>{lottery.expect.slice(4)}</span>
+                <div className="lottery-openrecord-item" key={index}>
+                <span>{lottery.opentimestamp.toString().slice(4)}</span>
                 <span>{lottery.opencode.split(',').join(' ')}</span>
               </div>
               )
@@ -42,15 +42,15 @@ class OpenRecord extends Component {
 OpenRecord.defaultProps = {
   lotteryList: [
     {
-      expect: '000000',
+      opentimestamp: 1512486060,
       opencode: '00 00 00 00 00 00'
     },
     {
-      expect: '000000',
+      opentimestamp: 1512486060,
       opencode: '00 00 00 00 00 00'
     },
     {
-      expect: '000000',
+      opentimestamp: 1512486060,
       opencode: '00 00 00 00 00 00'
     }
   ],
