@@ -1,0 +1,86 @@
+.lottery-container {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  border-bottom: 1px solid #cbcbcb;
+
+  .lottery-opentime-container {
+    width: 285px;
+    text-align: center;
+  }
+
+  .lottery-opennumber-container {
+    width: 450px;
+    text-align: center;
+  }
+
+  .lottery-openrecord-container {
+    width: 240px;
+    padding: 0 20px 0 48px;
+  }
+
+  .lottery-opentime, .lotter-opennumber {
+    font-size: 14px;
+    color: #6f6e72;
+    
+    span {
+      color: #f30000;
+    }
+  }
+
+  .lottery-opentime {
+    border-right: 1px solid #cbcbcb;
+    height: 93px;
+  }
+
+  .timer {
+    font-size: 44px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .opennumber-row {
+    padding-left: 63px;
+    border-right: 1px solid #cbcbcb;
+    margin-top: -20px;
+    padding-top: 20px;
+    height: 93px;
+  }
+
+  .opennumber {
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    float: left;
+    margin-right: 12px;
+    width: 59px;
+    height: 59px;
+    line-height: 59px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #fafafa, #dcdcdc);
+  }
+
+  .lottery-openrecord-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .lottery-openrecord-item {
+    height: 22px;
+    border: 1px solid #cbcbcb;
+    border-radius: 11px / 11px;
+    margin-bottom: 7px;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 22px;
+    padding: 0 13px;
+  }
+}

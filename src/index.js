@@ -1,8 +1,15 @@
-import './index.css'
+import './index.scss'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
 
 import App from './App'
 
-render(<App/>, document.querySelector('#app'))
+const Root = () => (
+  <Router>
+    <App />
+  </Router>
+)
+
+render(<Root />, document.querySelector('#app'))

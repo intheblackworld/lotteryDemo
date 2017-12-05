@@ -1,18 +1,35 @@
-import './App.css'
+import React, { Component } from 'react'
+import { Link, Route, Switch } from 'react-router-dom'
 
-import React, {Component} from 'react'
+import './App.scss'
+import 'bulma/css/bulma.css'
+
+import routes from './routes'
 
 class App extends Component {
   render() {
-    return <div className="App">
-      <div className="App-heading App-flex">
-        <h2>Welcome to <span className="App-react">React</span></h2>
+    return (
+      <div>
+        <header className="header">
+          <div className="container">
+            <div className="header-title">XXX娛樂</div>
+            <div className="tab-container">
+              <Link className="button is-primary tab" to="/">首頁</Link>
+              <Link className="button is-primary tab" to="/lottery">投注頁</Link>
+            </div>
+          </div>
+        </header>
+        <div className="content-container container">
+          <Switch>
+            {routes.map(route => (
+              <Route key={route.path} { ...route } />
+            ))}
+          </Switch>
+        </div>
+        <footer className="footer">2015 XX娛樂, Topone 執行運營, Curacuo 政府牌照</footer>
       </div>
-      <div className="App-instructions App-flex">
-        <img className="App-logo" src={require('./react.svg')}/>
-        <p>Edit <code>src/App.js</code> and save to hot reload your changes.</p>
-      </div>
-    </div>
+    )
+
   }
 }
 
